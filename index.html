@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            /* background-color: rgb(3, 2, 26); */
+            /* background-color: #E8E8E8; */
+            /* padding-top: 30px; */
+            /* padding-bottom: 300px; */
+            box-sizing: border-box;
+        }
+        
+        .company-information {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            width: 100%;
+            flex-wrap: wrap;
+            box-sizing: border-box;
+            box-sizing: border-box;
+            /* border: 1px solid red; */
+        }
+        
+        .image-container {
+            display: flex;
+            justify-content: center;
+            align-items: top;
+            flex-direction: column;
+            width: min(100%, 500px);
+            /* width: min(100%, 500px); */
+            /* border: 1px solid red; */
+            box-sizing: border-box;
+        }
+        
+        .image-container img {
+            width: 100%;
+        }
+        
+        .company-information-text-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            /* width: 100%; */
+            flex-grow: 1;
+            /* border: 1px solid red; */
+            padding-top: 60px;
+            padding-bottom: 20px;
+            padding-left: 40px;
+            padding-right: 100px;
+            box-sizing: border-box;
+        }
+        
+        .reliable-div {
+            align-items: right;
+            text-align: right;
+            width: 100%;
+            font-size: 22px;
+            font-weight: 600;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        .exceptional-div {
+            align-items: right;
+            text-align: right;
+            width: 100%;
+            font-size: 50px;
+            word-spacing: 10px;
+            /* word-break: break-all; */
+            font-weight: 600;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            
+        }
+        
+        .info-div {
+            align-items: right;
+            text-align: right;
+            width: 100%;
+            font-size: 20px;
+            padding-top: 20px;
+            /* word-break: break-all; */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+        }
+
+        .directors-info-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            width: 100%;
+            flex-wrap: wrap;
+            gap: 80px;
+            margin-top: 40px;
+            /* border: 1px solid green; */
+            box-sizing: border-box;
+        }
+        
+        .directors-info-card {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: min(100%, 350px);
+            padding: 20px;
+            /* border: 1px solid red; */
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            /* box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px; */
+            box-sizing: border-box;
+            border-radius: 10px;
+            /* background: rgba(255, 255, 255, 0.1);
+ backdrop-filter: blur(10px);
+ box-shadow: 0 5px 15px rgba(0,0,0,0.08) */
+
+        }
+
+        .directors-info-card-image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 100%;
+            /* border: 1px solid red; */
+        }
+
+        .directors-info-card-image-container img {
+            width: 100%;
+        }
+
+        .directors-info-card-text-name {
+            font-size: 34px;
+            font-weight: 600;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            /* border: 1px solid red; */
+        }
+
+        .directors-info-card-text-designation {
+            font-size: 24px;
+            font-weight: 600;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            /* border: 1px solid red; */
+        }
+
+        .footer-container {
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            background-color: #fff;
+            color: rgb(3, 2, 26);
+            ;
+            padding: 40px;
+            box-sizing: border-box;
+        }
+
+        .footer {
+            border-radius: 10px;
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: row;
+            padding: 20px;
+            padding-right: 60px;
+            background-color: rgb(3, 2, 26);
+            ;
+            color: rgb(3, 2, 26);
+            ;
+            gap: 20px;
+            font-size: 20px;
+            box-sizing: border-box;
+
+        }
+
+        .footer-left {
+            display: flex;
+            flex-direction: row;
+            height: 100%;
+            /* background-color: #be9023; */
+            padding: 20px;
+            box-sizing: border-box;
+            justify-content: flex-start;
+            align-items: flex-start;
+            color: rgb(3, 2, 26);
+            ;
+            padding: 20px 20px;
+            gap: 20px;
+            color: #fff;
+            flex-wrap: wrap;
+        }
+
+        .footer-left-1,
+        .footer-left-2 {
+            display: flex;
+            border-right: 1px solid #fff;
+            /* height: 100%; */
+            min-width: 200px;
+            height: auto;
+            padding-right: 20px;
+        }
+
+        .contact-us-chips-container {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            flex-direction: row;
+            width: 100%;
+            flex-wrap: wrap;
+            /* border: 1px solid red; */
+            padding-top: 20px;
+            padding-bottom: 20px;
+            cursor: pointer;
+            gap: 20px;
+        }
+
+        .contact-us-chip {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            /* width: 100%; */
+            /* border: 1px solid red; */
+            /* padding-top: 20px; */
+            /* padding-bottom: 20px; */
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            padding: 5px 12px;
+            border-radius: 15px;
+            gap: 10px;
+        }
+
+        .contact-us-chip-text {
+            font-size: 17px;
+            color: rgb(3, 2, 26);
+            /* margin-left: 10px; */
+            font-weight: 550;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        a { color: inherit; font: inherit; text-decoration: none;} 
+        @media only screen and (max-width: 500px) {
+            .company-information-text-container {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+            /* .directors-info-container {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+            .directors-info-card {
+                width: 100%;
+            }
+            .directors-info-card-image-container {
+                width: 100%;
+            }
+            .directors-info-card-text-name {
+                font-size: 24px;
+            }
+            .directors-info-card-text-designation {
+                font-size: 18px;
+            } */
+            /* .contact-us-chips-container {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+            .contact-us-chip {
+                padding: 5px 10px;
+            }
+            .contact-us-chip-text {
+                font-size: 15px;
+            } */
+            .footer {
+                padding-right: 20px;
+            }
+            .footer-left {
+                padding: 20px 0px;
+            }
+            .footer-left-1,
+            .footer-left-2 {
+                padding-right: 10px;
+                border-right: none;
+            }
+        }
+
+        
+    </style>
+</head>
+
+<body>
+    <div class="company-information">
+        <div class="image-container">
+            <img src="SAPTGIRI_INFRA_LOGO.png" alt="rishitechno">
+        </div>
+        <div class="company-information-text-container">
+            <div class="reliable-div">
+                PROFESSIONAL. INNOVATIVE. RELIABLE
+            </div>
+            <div class="exceptional-div">
+                Exceptional Service
+                <!-- <br /> -->
+                Exceeding Expectations
+            </div>
+            <div class="info-div">
+                Welcome to <b>Sapthagiri Infra</b>, your destination where concrete meets excellence. We take pride in
+                delivering a superior blend of precision and quality. Our dedicated team of professionals strives for
+                excellence in every batch, providing you with concrete solutions that stand the test of time. Trust
+                Sapthagiri Infra for all your construction needs, where we don't just deliver concrete – we
+                deliver excellence
+            </div>
+            <div class="contact-us-chips-container">
+                <a href="mailto:admin@sapthagiriinfra.in">
+
+                    <div class="contact-us-chip">
+                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0 0 48 48">
+                            <path fill="#4caf50" d="M45,16.2l-5,2.75l-5,4.75L35,40h7c1.657,0,3-1.343,3-3V16.2z"></path><path fill="#1e88e5" d="M3,16.2l3.614,1.71L13,23.7V40H6c-1.657,0-3-1.343-3-3V16.2z"></path><polygon fill="#e53935" points="35,11.2 24,19.45 13,11.2 12,17 13,23.7 24,31.95 35,23.7 36,17"></polygon><path fill="#c62828" d="M3,12.298V16.2l10,7.5V11.2L9.876,8.859C9.132,8.301,8.228,8,7.298,8h0C4.924,8,3,9.924,3,12.298z"></path><path fill="#fbc02d" d="M45,12.298V16.2l-10,7.5V11.2l3.124-2.341C38.868,8.301,39.772,8,40.702,8h0 C43.076,8,45,9.924,45,12.298z"></path>
+                        </svg>
+                        <div class="contact-us-chip-text">
+                            admin@sapthagiriinfra.in
+                        </div>
+                    </div>
+                </a>
+                <a href="https://wa.me/918888328884" target="_blank">
+                    <div class="contact-us-chip">
+                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0 0 48 48">
+                            <path fill="#fff" d="M4.868,43.303l2.694-9.835C5.9,30.59,5.026,27.324,5.027,23.979C5.032,13.514,13.548,5,24.014,5c5.079,0.002,9.845,1.979,13.43,5.566c3.584,3.588,5.558,8.356,5.556,13.428c-0.004,10.465-8.522,18.98-18.986,18.98c-0.001,0,0,0,0,0h-0.008c-3.177-0.001-6.3-0.798-9.073-2.311L4.868,43.303z"></path><path fill="#fff" d="M4.868,43.803c-0.132,0-0.26-0.052-0.355-0.148c-0.125-0.127-0.174-0.312-0.127-0.483l2.639-9.636c-1.636-2.906-2.499-6.206-2.497-9.556C4.532,13.238,13.273,4.5,24.014,4.5c5.21,0.002,10.105,2.031,13.784,5.713c3.679,3.683,5.704,8.577,5.702,13.781c-0.004,10.741-8.746,19.48-19.486,19.48c-3.189-0.001-6.344-0.788-9.144-2.277l-9.875,2.589C4.953,43.798,4.911,43.803,4.868,43.803z"></path><path fill="#cfd8dc" d="M24.014,5c5.079,0.002,9.845,1.979,13.43,5.566c3.584,3.588,5.558,8.356,5.556,13.428c-0.004,10.465-8.522,18.98-18.986,18.98h-0.008c-3.177-0.001-6.3-0.798-9.073-2.311L4.868,43.303l2.694-9.835C5.9,30.59,5.026,27.324,5.027,23.979C5.032,13.514,13.548,5,24.014,5 M24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974 M24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974 M24.014,4C24.014,4,24.014,4,24.014,4C12.998,4,4.032,12.962,4.027,23.979c-0.001,3.367,0.849,6.685,2.461,9.622l-2.585,9.439c-0.094,0.345,0.002,0.713,0.254,0.967c0.19,0.192,0.447,0.297,0.711,0.297c0.085,0,0.17-0.011,0.254-0.033l9.687-2.54c2.828,1.468,5.998,2.243,9.197,2.244c11.024,0,19.99-8.963,19.995-19.98c0.002-5.339-2.075-10.359-5.848-14.135C34.378,6.083,29.357,4.002,24.014,4L24.014,4z"></path><path fill="#40c351" d="M35.176,12.832c-2.98-2.982-6.941-4.625-11.157-4.626c-8.704,0-15.783,7.076-15.787,15.774c-0.001,2.981,0.833,5.883,2.413,8.396l0.376,0.597l-1.595,5.821l5.973-1.566l0.577,0.342c2.422,1.438,5.2,2.198,8.032,2.199h0.006c8.698,0,15.777-7.077,15.78-15.776C39.795,19.778,38.156,15.814,35.176,12.832z"></path><path fill="#fff" fill-rule="evenodd" d="M19.268,16.045c-0.355-0.79-0.729-0.806-1.068-0.82c-0.277-0.012-0.593-0.011-0.909-0.011c-0.316,0-0.83,0.119-1.265,0.594c-0.435,0.475-1.661,1.622-1.661,3.956c0,2.334,1.7,4.59,1.937,4.906c0.237,0.316,3.282,5.259,8.104,7.161c4.007,1.58,4.823,1.266,5.693,1.187c0.87-0.079,2.807-1.147,3.202-2.255c0.395-1.108,0.395-2.057,0.277-2.255c-0.119-0.198-0.435-0.316-0.909-0.554s-2.807-1.385-3.242-1.543c-0.435-0.158-0.751-0.237-1.068,0.238c-0.316,0.474-1.225,1.543-1.502,1.859c-0.277,0.317-0.554,0.357-1.028,0.119c-0.474-0.238-2.002-0.738-3.815-2.354c-1.41-1.257-2.362-2.81-2.639-3.285c-0.277-0.474-0.03-0.731,0.208-0.968c0.213-0.213,0.474-0.554,0.712-0.831c0.237-0.277,0.316-0.475,0.474-0.791c0.158-0.317,0.079-0.594-0.04-0.831C20.612,19.329,19.69,16.983,19.268,16.045z" clip-rule="evenodd"></path>
+                        </svg>
+                        <div class="contact-us-chip-text">
+                            8888328884
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="directors-info-container">
+        <div class="directors-info-card">
+            <div class="directors-info-card-image-container">
+                <img src="https://www.eimt.ch/wp-content/uploads/2022/12/dummy-user.png" alt="rishitechno">
+            </div>
+            <div class="directors-info-card-text-name">
+                Rajiv Panjwani
+            </div>
+            <div class="directors-info-card-text-designation">
+                Director
+            </div>
+        </div>
+        <div class="directors-info-card">
+            <div class="directors-info-card-image-container">
+                <img src="https://www.eimt.ch/wp-content/uploads/2022/12/dummy-user.png" alt="rishitechno">
+            </div>
+            <div class="directors-info-card-text-name">
+                Dhanesh Kanpile
+            </div>
+            <div class="directors-info-card-text-designation">
+                Director
+            </div>
+
+        </div>
+        </div>
+        <div class="directors-info-container">
+
+        <div class="directors-info-card">
+            <div class="directors-info-card-image-container">
+                <img src="https://www.eimt.ch/wp-content/uploads/2022/12/dummy-user.png" alt="rishitechno">
+            </div>
+            <div class="directors-info-card-text-name">
+                Rishiraj Panjwani
+            </div>
+            <div class="directors-info-card-text-designation">
+                Techincal Director
+            </div>
+
+        </div>
+
+        <div class="footer-container">
+            <div class="footer">
+                <div class="footer-left">
+                    <div class="footer-left-1">
+                        Jambhe, Punawale<br />
+                        Pune - 411033<br />
+                    </div>
+                    <div class="footer-left-2">
+                        Phone: 8888328884 <br />
+                        admin@sapthagiriinfra.in <br />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
